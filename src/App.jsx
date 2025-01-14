@@ -5,6 +5,7 @@ import RegisterPage from './pages/RegisterPage';
 import Weather from './pages/Weather';
 import Favorites from './pages/Favorites';
 import NoPage from './pages/NoPage';
+import ProfilePage from './pages/Profile';
 
 import './App.css';
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="weather" element={<Weather />} />
         <Route path="favorites" element={<Favorites />} />
         <Route path="*" element={<NoPage />} />
+        <Route path="profile" element={<ProfilePage />} />
       </Routes>
     </BrowserRouter>
   );
