@@ -1,5 +1,5 @@
 import React from 'react';
-import Sunny from '../assets/sunny.png';
+import Sunny from '../assets/Sunny.png';
 import Home from '../assets/home.png';
 import Typewriter from '../Componets/TypeWriter';
 const background = require('../assets/Back.png');
