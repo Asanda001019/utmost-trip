@@ -15,26 +15,33 @@ function HomePage() {
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full rounded-full"
         />
       </div>
+      
+      {/* Home Image */}
       <img
         src={Home}
         alt="Home"
-        className="absolute top-2/4  right-3/4 transform -translate-x-1/2 -translate-y-1/2 w-50 h-40 rotate-12"
+        className="absolute top-2/4 right-3/4 transform -translate-x-1/2 -translate-y-1/2 w-50 h-40 rotate-12 hidden md:block" // Hide on small screens
       />
 
-<img
+      {/* Background Image */}
+      <img
         src={background}
-        alt="Home"
-        className="absolute top-2/4 right-0 transform -translate-x-1/2 -translate-y-1/2 w-50 h-40 rotate-12"
+        alt="Background"
+        className="absolute top-2/4 right-0 transform -translate-x-1/2 -translate-y-1/2 w-50 h-40 rotate-12 hidden md:block" // Hide on small screens
       />
+
       <Typewriter />
       <p className="text-white text-lg text-center mt-2 font-roboto max-w-md mr-4">
         Our app provides you with real-time weather updates and personalized activity suggestions based on current conditions.
         Whether it's sunny, rainy, or snowy, we have the perfect activities lined up for you.
         Explore the great outdoors, plan a cozy day inside, or find the best spots to enjoy the weather.
       </p>
-    <Link to="/weather" ><button className="bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-3 px-6 rounded mt-6 transition duration-300 ease-in-out transform hover:scale-105">
-        Get Started
-      </button></Link>
+      
+      <Link to="/weather">
+        <button className="bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-3 px-6 rounded mt-6 transition duration-300 ease-in-out transform hover:scale-105">
+          Get Started
+        </button>
+      </Link>
     </div>
   );
 }
