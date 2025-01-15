@@ -40,6 +40,6 @@ To get started with the UTMOST TRIP project, follow these steps:
 2. Install the dependencies:<br>
     npm install
 
-4. Start the development server:
+4. Start the development server:<br>
    npm run dev
 
