@@ -55,9 +55,10 @@ const Activities = ({ weather, userEmail }) => {
 
   const toggleFavorite = async (activity) => {
     try {
-      const city = weather?.city || 'Unknown City'; // Default if undefined
-      const country = weather?.country || 'Unknown Country'; // Default if undefined
+      const city = weather?.city || 'Current City'; // Default if undefined
+      const country = weather?.country || 'Current Country'; // Default if undefined
       const icon = weather?.icon || ''; // Default empty string if undefined
+      const activityname = activity.name;
   
       const activityRef = doc(db, 'favorites', userEmail, 'activities', activity);
       console.log(`Document Reference Path: favorites/${userEmail}/activities/${activity}`);
