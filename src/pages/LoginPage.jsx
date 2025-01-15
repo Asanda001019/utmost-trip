@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { auth } from '../Componets/Firebase'; 
 import { signInWithEmailAndPassword } from 'firebase/auth';
 
-function LoginPage() {
+function LoginPage({ setUserEmail }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   
@@ -14,6 +14,7 @@ function LoginPage() {
     e.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, password);
+      setUserEmail(email);
       navigate('/profile'); 
     } catch (error) {
       console.error("Error logging in:", error);

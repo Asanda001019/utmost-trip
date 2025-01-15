@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 function HomePage() {
   return (
-    <div className="bg-[#2B286D] min-h-screen flex flex-col items-center justify-center p-6 relative">
+    <div className="bg-[#46419b] min-h-screen flex flex-col items-center justify-center p-6 relative">
       <div className="relative w-48 h-48 rounded-full shadow-2xl shadow-orange-400/50 mb-6">
         <img
           src={Sunny}

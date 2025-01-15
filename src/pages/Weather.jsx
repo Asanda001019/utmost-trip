@@ -6,14 +6,17 @@ import Temp from '../Componets/Temp'
 import Forecast from '../Componets/Forecast'
 import getFormattedWeatherData from '../../Backend/server'
 import Activities from '../Componets/Activities'
+import db from '../Componets/Firebase';
 
-const Weather = () => {
+const Weather = ({userEmail}) => {
+   console.log(userEmail);
   
   const [query, setQuery] = useState({q: 'pietermaritzburg'});
   const [units, setUnits] = useState('metric')
   const [weather, setWeather ] = useState(null)
   
   const getWeather = async () => {
+   
   await getFormattedWeatherData( { ...query, units }).then( (data) =>{
     setWeather(data);
   });
@@ -24,7 +27,7 @@ const Weather = () => {
     getWeather()
   }, [query, units]);
 
-  console.log(weather);
+  // console.log(weather);
 
   return (
     <>
@@ -47,7 +50,7 @@ const Weather = () => {
     <Temp weather={weather}/>
     <Forecast title="daily forecast" data={weather.daily} />
     <h1 className='text-3xl font-bold'>Activities</h1>
-    <Activities weather={weather} />
+    <Activities weather={weather} userEmail={userEmail}/>
      </>
     )
     }
