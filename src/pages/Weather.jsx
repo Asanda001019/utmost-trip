@@ -9,7 +9,7 @@ import Activities from '../Componets/Activities'
 import db from '../Componets/Firebase';
 
 const Weather = ({userEmail}) => {
-   console.log(userEmail);
+   console.log(userEmail, "userEmail1");
   
   const [query, setQuery] = useState({q: 'pietermaritzburg'});
   const [units, setUnits] = useState('metric')

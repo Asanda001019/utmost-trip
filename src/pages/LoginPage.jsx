@@ -15,7 +15,7 @@ function LoginPage({ setUserEmail }) {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       setUserEmail(email);
-      navigate('/profile'); 
+      navigate('/'); 
     } catch (error) {
       console.error("Error logging in:", error);
       alert(error.message);
