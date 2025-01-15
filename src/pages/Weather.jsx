@@ -6,6 +6,7 @@ import Temp from '../Componets/Temp'
 import Forecast from '../Componets/Forecast'
 import getFormattedWeatherData from '../../Backend/server'
 import Activities from '../Componets/Activities'
+import { Link } from 'react-router-dom'
 import db from '../Componets/Firebase';
 
 const Weather = ({userEmail}) => {
@@ -51,6 +52,11 @@ const Weather = ({userEmail}) => {
     <Forecast title="daily forecast" data={weather.daily} />
     <h1 className='text-3xl font-bold'>Activities</h1>
     <Activities weather={weather} userEmail={userEmail}/>
+    <Link to="/favorites">
+      <button className="bg-purple-600 text-white px-4 py-2 rounded-md">
+        View Favourites
+      </button>
+    </Link>
      </>
     )
     }

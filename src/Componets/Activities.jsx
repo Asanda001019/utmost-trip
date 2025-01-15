@@ -63,22 +63,23 @@ const Activities = ({ weather, userEmail }) => {
       console.log(`Document Reference Path: favorites/${userEmail}/activities/${activity}`);
   
       if (isFavorite(activity)) {
-        // Remove favorite
+        // Remove favorite from Firestore
         await deleteDoc(activityRef); // Wait for the deletion to complete
-        setFavorites(favorites.filter((item) => item !== activity));
+        // Update state to reflect change
+        setFavorites(prevFavorites => prevFavorites.filter((item) => item !== activity));
         console.log(`Removed activity: ${activity}`);
       } else {
-        // Add favorite
+        // Add favorite to Firestore
         await setDoc(activityRef, { city, country, icon }); // Wait for the addition to complete
-        setFavorites([...favorites, activity]);
+        // Update state to reflect change
+        setFavorites(prevFavorites => [...prevFavorites, activity]);
         console.log(`Added activity: ${activity}`);
       }
     } catch (error) {
-      console.error('Error updating favorites:', error.message);
+      console.error('Error updating favorites:', error);
       alert('Failed to update favorites. Please check the console for details.');
     }
   };
-  
   
   
 
