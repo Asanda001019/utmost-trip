@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "Jacques";
+    src: url('/fonts/JacquesFrancoisShadow-Regular.ttf');
+}
+
