@@ -6,25 +6,30 @@ import RegisterPage from './pages/RegisterPage'
 import Weather from './pages/Weather'
 import Favorites from './pages/Favorites'
 import NoPage from './pages/NoPage' 
+import Profile from './pages/Profile'
+import getFormattedWeatherData  from '../Backend/server'
 
-import './App.css';
+import './App.css'
 
 function App() {
+ 
+
   return (
+    <>
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />}>
+    <Routes>
+          <Route path='/' element={<Home />} />
           <Route index element={<Home />} />
-          <Route path="login" element={<LoginPage />} />
-          <Route path="register" element={<RegisterPage />} />
-          <Route path="weather" element={<Weather />} />
-          <Route path="favorites" element={<Favorites />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/weather" element={<Weather />} />
+          <Route path="/favorites" element={<Favorites />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="*" element={<NoPage />} />
-        </Route>
       </Routes>
     </BrowserRouter>
-    
+    </>
   )
 }
 
-export default App;
+export default App
