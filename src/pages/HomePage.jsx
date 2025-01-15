@@ -2,7 +2,7 @@ import React from 'react';
 import Sunny from '../assets/Sunny.png';
 import Home from '../assets/home.png';
 import Typewriter from '../Componets/TypeWriter';
-const background = require('../assets/Back.png');
+import background from '../assets/Back.png';
 import { Link } from 'react-router-dom';
 
 function HomePage() {
