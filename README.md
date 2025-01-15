@@ -37,9 +37,9 @@ To get started with the UTMOST TRIP project, follow these steps:
    ```bash
    git clone https://github.com/yourusername/utmost-trip.git
 
-2. ```Install the dependencies:
+2. Install the dependencies:
     npm install
 
-4. ```Start the development server:
+3. Start the development server:
    npm run dev
 
